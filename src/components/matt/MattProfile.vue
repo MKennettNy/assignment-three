@@ -12,6 +12,7 @@
      </header>
 
      <MattBio :userdata="userdata"/>
+     <MattProjectList :projectdata="projectdata" :userdata="userdata" />
      <MattMyFooter />
    </div> 
    </template>
@@ -20,12 +21,14 @@
 <script>
 import MattBio from "./MattBio"
 import MattMyFooter from "./MattMyFooter"
+import MattProjectList from "./MattProjectList"
 
 export default {
  name: "MattProfile",
  components: {
    MattBio,
-   MattMyFooter
+   MattMyFooter,
+   MattProjectList
  },
 
 data: function() {
@@ -36,6 +39,7 @@ data: function() {
   }, 
   created: function() {
       this.getUserData();
+      this.getProjectData();
   },
   methods: {
     getUserData() {
@@ -52,16 +56,17 @@ data: function() {
       }
      },
      getProjectData() {
-       if (this.$route.params.userId) {
-       this.userId = this.$route.params.userId;
-       this.$http
-         .get(
-           "https://behance-mock-api.glitch.me/api/users/" +
-            this.userId + "/projects"
-          )
-          .then(function(data) {
-          this.userdata = data.body;
-        });
+        if (this.$route.params.userId) {
+          this.userId = this.$route.params.userId;
+          this.$http
+            .get(
+              "https://behance-mock-api.glitch.me/api/users/" +
+              this.userId +
+              "/projects"
+            )
+            .then(function(data) {
+              this.projectdata = data.body;
+            });
       }
     }
   }
