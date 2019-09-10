@@ -47,6 +47,10 @@ img {
   padding: 10px;
 }
 .stats h5 {
-  padding: 10px;
+  padding: 30px 40px;
+}
+
+.username {
+  padding: 30px;
 }
 </style>

@@ -74,6 +74,6 @@ li {
 }
 
 a {
-  color: black
+  color: white
 }
 </style>

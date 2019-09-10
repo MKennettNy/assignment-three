@@ -114,9 +114,11 @@ li {
 }
 
 .headerText {
- Padding: 300px;
- font-size: 100px;
- color: white
+  Padding: 200px;
+  font-size: 200px;
+  color: white;
+  font-family: 'Just Another Hand', cursive;
+  font-weight: lighter
 }
 
 a {

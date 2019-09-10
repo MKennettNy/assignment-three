@@ -16,10 +16,10 @@ export default {
   name: "Designers",
   props: ["userdata", "projectdata"],
    watch: {
-     userdata: function(val) {
-       this.userdata=val;
+      projectId: function(val) {
+        this.getProject(val);
+      }
     }
-  }
 }
 </script>
 
@@ -28,6 +28,7 @@ export default {
 .projectimages {
     display: flex;
     justify-content: center;
+    padding-bottom: 30px;
 }
 
 img {

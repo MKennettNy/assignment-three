@@ -54,7 +54,7 @@ export default {
 
 
 .hero{
-  background-image: url(./MattImages/ProjectImage2.jpg);
+  background-image: url(./MattImages/ProjectImage3.jpg);
   height: 50vh;
   background-size: cover;
   background-position: center;
@@ -81,6 +81,7 @@ li {
   padding: 25px 5px;
   color: white;
   font-size: 30px;
+  font-weight: lighter
 }
 
 .logo {
@@ -90,13 +91,16 @@ li {
 }
 
 .headerText {
-  Padding: 300px;
-  font-size: 100px;
-  color: white
+  Padding: 200px;
+  font-size: 200px;
+  color: white;
+  font-family: 'Just Another Hand', cursive;
+  font-weight: lighter
 }
 
 a {
-  color: white
+  color: white;
+  
 }
 
 </style>
